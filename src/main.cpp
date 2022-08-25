@@ -80,8 +80,9 @@ void setup() {
 
 void loop() {
     
-    // Write values from the sensors to a variable. This action could have been a loop but that results
-       // in significantly longer assembly code.
+    // Write values from the sensors to a variable. The goal is to have MSBs represent left
+       // sensors and LSBs represent right sensors. This action could have been a loop but that
+       // results in significantly longer assembly code.
     sensorValues = 0;
     sensorValues = digitalRead(sensorPins[0]); // Write the value for the first sensor.
     sensorValues = sensorValues << 1; // Make room for the next sensor at the LSB.
