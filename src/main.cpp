@@ -36,7 +36,7 @@ uint8_t leftActualPwm = 255,
         rightActualPwm = 255,
         rightTargetPwm = 255;
 
-uint8_t sensorValues;
+byte sensorValues;
 
 // Differential drive definitions for each direction.
 inline void left() {
@@ -88,7 +88,7 @@ void loop() {
     sensorValues = sensorValues << 1; // Make room for the next sensor at the LSB.
     sensorValues = sensorValues + digitalRead(sensorPins[1]); // Write the value for the next sensor to the LSB.
     sensorValues = sensorValues << 1; // ...and repeat.
-    sensorValues = sensorValues + digitalRead(sensorPins[2]); 
+    sensorValues = sensorValues + digitalRead(sensorPins[2]);
 
     // Set the direction for the robot based on the sensor values. These value-direction pairs have been
        // determined experimentally. Since this is the crux of building a line follower, the explanation
