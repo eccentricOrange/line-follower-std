@@ -8,14 +8,14 @@ The main loop here is structured to use feedback control. In each pass of the lo
 #include <Arduino.h>
 #include <DDBot.h>
 
-static const uint8_t directionPins[] = {
+uint8_t directionPins[] = {
     4,  // Left motor forward
     5,  // Left motor backward
     2,  // Right motor forward
     3   // Right motor backward
 };
 
-static const uint8_t sensorPins[] = {
+uint8_t sensorPins[] = {
     7,  // Left sensor
     8,  // Middle sensor
     9   // Right sensor
