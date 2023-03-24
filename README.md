@@ -1,12 +1,16 @@
 # A basic line follower
 
-This is the code for a prototypical line follower.
+This is the code for a prototypical line follower. 
 
 This robot has the following features:
 * It would use 3 infrared sensors to detect the line. Each sensor outputs a Boolean value.
 * It would follow [differential drive](https://en.wikipedia.org/wiki/Differential_wheeled_robot) principles for movement.
 * The expected control hardware is an Arduino-compatible microcontroller.
 * The expected motor driver is a something like an L293D or L298N motor driver.
+
+___
+
+Note that this project is written for [Platform IO](https://platformio.org/). If you just want the code, it's in [`src/main.cpp`](src/main.cpp).
 
 ## Logic
 The logic in this program is very simple. It can be worked by using a model or drawing of the robot, and a line on a piece of paper.
