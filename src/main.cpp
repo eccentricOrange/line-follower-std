@@ -36,13 +36,14 @@ void loop() {
     sensorValues = 0;
     sensorValues = digitalRead(sensorPins[0]); // Write the value for the first sensor.
     sensorValues = sensorValues << 1; // Make room for the next sensor at the LSB.
-    sensorValues = sensorValues + digitalRead(sensorPins[1]); // Write the value for the next sensor to the LSB.
+    sensorValues = sensorValues + digitalRead(sensorPins[1]); // Write the value for the next sensor
+                                                              // to the LSB.
     sensorValues = sensorValues << 1; // ...and repeat.
     sensorValues = sensorValues + digitalRead(sensorPins[2]);
 
-    // Set the direction for the robot based on the sensor values. These value-direction pairs have been
-       // determined experimentally. Since this is the crux of building a line follower, the explanation
-       // is left as an exercise for the reader.
+    // Set the direction for the robot based on the sensor values. These value-direction pairs have
+       // been determined experimentally. Since this is the crux of building a line follower, the
+       // explanation is left as an exercise for the reader.
     switch (sensorValues) {
         case 0: // 000
             bot.forward();
