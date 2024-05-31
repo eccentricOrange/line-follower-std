@@ -46,7 +46,7 @@ void loop() {
        // explanation is left as an exercise for the reader.
     switch (sensorValues) {
         case 0: // 000
-            bot.forward();
+            bot.left();
             break;
 
         case 1: // 001
@@ -66,7 +66,7 @@ void loop() {
             break;
 
         case 5: // 101
-            bot.forward();
+            bot.left();
             break;
 
         case 6: // 110
@@ -74,7 +74,7 @@ void loop() {
             break;
 
         case 7: // 111
-            bot.forward();
+            bot.left();
             break;
         
         default:
